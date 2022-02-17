@@ -1,0 +1,15 @@
+INSERT INTO secret_user (first_name, last_name, code_name, country, organization, salary, knows_kung_fu) 
+VALUES ('Jimmy', 'Bond', '007', 'United Kingdom', 'MI6', 97200, false),
+('George', 'Smiley', 'Beggarman', 'United Kingdom', 'MI6', 97200, false),
+('Jason', 'Bourne', 'Delta One', 'United States', 'CIA', 115000, false),
+('Jack', 'Ryan', null, 'United States', 'CIA', 85000, false),
+('Ethan', 'Hunt', 'Bravo Echo 1-1', 'United States', 'IMF', 250000, false),
+('Emma', 'Peel', 'Mrs. Peel', 'United Kingdom', 'MI6', 97200, true),
+('Susan', 'Hilton', 'Agent 99', 'United States', 'Control', 250000, false),
+('Nick', 'Fury', 'Foxtrot', 'United States', 'SHIELD', 250000, false);
+update secret_user set first_name = 'James'  where user_id = 1;
+update secret_user set code_name = 'Neo 2.0',salary = 11500
+where first_name = 'Jack' and last_name = 'Rayan';
+select * from secret_user;
+update  secret_user set salary = 1.1*salary;
+

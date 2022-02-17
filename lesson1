@@ -1,0 +1,25 @@
+select * from earthquake;
+select count(*) as total from earthquake;
+select magnitude, place, occurred_on from earthquake;
+select * from earthquake where occurred_on >= '2010-01-01';
+select * from earthquake where occurred_on >= '2010-01-01' and occurred_on <= '2010-12-31' order by magnitude DESC LIMIT 1;
+select * from earthquake limit 1;
+
+/*DISTINCT : */
+select distinct(cause) from earthquake;
+
+/*Functions Aggregations : COUNT , MAX , MIN , AVG , SUM*/
+/*More SQL Queries : AND , OR , IN , LIKE, ... */
+
+select MIN(occurred_on), MAX(occurred_on) from earthquake;
+select MIN(magnitude), MAX(magnitude) from earthquake;
+select COUNT(*) from earthquake where cause = 'earthquake';
+select COUNT(*) from earthquake where cause = 'nuclear explosion';
+select COUNT(*) from earthquake where cause = 'explosion';
+select * from earthquake where cause = 'explosion';
+select place, magnitude, occurred_on from earthquake where cause = 'nuclear explosion' order by occurred_on desc LIMIT 1;
+select place, magnitude, occurred_on from earthquake ORDER BY magnitude DESC LIMIT 10;
+select COUNT(*) from earthquake where place like '%Honshu%Japan%' and occurred_on between '2011-03-11' and '2011-03-18';
+select place from earthquake;
+select place, magnitude, occurred_on from earthquake where place in ('Banda Sea', 'Solomon Islands','Vanuatu');
+

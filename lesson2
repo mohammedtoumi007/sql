@@ -1,0 +1,12 @@
+/* insert into table_name (col1, col2,...) values (data1,data2,...);*/
+insert into chitter_user (user_id,username,encrypted_password,email,date_joined) 
+values (default,'firstuser','azertyuiop123','medtoumi0@gmail.com', '2019-02-25');
+
+insert into chitter_user (username,encrypted_password) values ('seconduser','qsdfghjklm123');
+
+select * from chitter_user;
+
+insert into post (user_id,post_text) values (1,'Hello World!'), (1,'Hello Solar System!');
+select * from post;
+
+
